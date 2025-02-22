@@ -14,3 +14,9 @@ static void MensagemPersonalizada(string nome)
 }
 
 MensagemPersonalizada("Luis");
+
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine($"Iteração número {i}");
+}

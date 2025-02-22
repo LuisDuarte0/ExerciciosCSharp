@@ -26,3 +26,5 @@ if (numero > 5)
 {
     Console.WriteLine("O número é maior que 5!");
 }
+
+Console.WriteLine("Fim do segundo dia de treinamento. Até amanhã!");

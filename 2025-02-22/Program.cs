@@ -20,3 +20,9 @@ for (int i = 1; i <= 5; i++)
 {
     Console.WriteLine($"Iteração número {i}");
 }
+
+int numero = 10;
+if (numero > 5)
+{
+    Console.WriteLine("O número é maior que 5!");
+}

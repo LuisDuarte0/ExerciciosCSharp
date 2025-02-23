@@ -23,3 +23,22 @@ foreach (int numero in numeros)
 {
     Console.WriteLine($"Número: {numero}");
 }
+
+int diaDaSemana = 3;
+switch (diaDaSemana)
+{
+    case 1:
+        Console.WriteLine("Hoje é segunda-feira.");
+        break;
+    case 2:
+        Console.WriteLine("Hoje é terça-feira.");
+        break;
+    case 3:
+        Console.WriteLine("Hoje é quarta-feira.");
+        break;
+    default:
+        Console.WriteLine("Dia não reconhecido.");
+        break;
+}
+
+Console.WriteLine("Fim do terceiro dia de treinamento. Até amanhã!");

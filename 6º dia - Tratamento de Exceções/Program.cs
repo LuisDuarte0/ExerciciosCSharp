@@ -40,3 +40,18 @@ catch (Exception ex)
 {
     Console.WriteLine($"Erro genérico: {ex.Message}");
 }
+
+try
+{
+    Console.Write("Digite mais um número: ");
+    int numero = int.Parse(Console.ReadLine());
+    Console.WriteLine($"Número digitado: {numero}");
+}
+catch (FormatException ex)
+{
+    Console.WriteLine($"Erro: {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Bloco finally executado.");
+}

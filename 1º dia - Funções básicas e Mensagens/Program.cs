@@ -1,5 +1,3 @@
-/*21 do fevereiro de 2025 */
-
 using System;
 
 class Program

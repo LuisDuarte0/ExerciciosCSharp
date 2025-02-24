@@ -1,4 +1,4 @@
- using System;
+using System;
 
 class Program
 {
@@ -6,10 +6,35 @@ class Program
     {
         Console.WriteLine("Bem-vindo ao quarto dia de treinamento em C#!");
         Console.WriteLine("Hoje irei trabalhar com Classes e Objetos.");
+
+        // Criando um objeto da classe Pessoa
+        Pessoa pessoa1 = new Pessoa
+        {
+            Nome = "Luis",
+            Idade = 20
+        };
+        pessoa1.Apresentar();
+
+        // Criando um objeto da classe Calculadora
+        Calculadora calc = new Calculadora();
+        Console.WriteLine($"Soma: {calc.Somar(5, 3)}");
+        Console.WriteLine($"Multiplicação: {calc.Multiplicar(5, 3)}");
+
+        // Criando um objeto da classe Aluno
+        Aluno aluno1 = new Aluno
+        {
+            Nome = "Maria",
+            Idade = 20,
+            Matricula = "12345"
+        };
+        aluno1.Apresentar();
+        aluno1.Estudar();
+
+        Console.WriteLine("Fim do quarto dia de treinamento.");
     }
 }
 
-
+// Classe Pessoa
 class Pessoa
 {
     private string _nome;
@@ -33,13 +58,7 @@ class Pessoa
     }
 }
 
-Pessoa pessoa1 = new Pessoa
-{
-    Nome = "Luis",
-    Idade = 20
-};
-pessoa1.Apresentar();
-
+// Classe Calculadora
 class Calculadora
 {
     public int Somar(int a, int b)
@@ -53,10 +72,7 @@ class Calculadora
     }
 }
 
-Calculadora calc = new Calculadora();
-Console.WriteLine($"Soma: {calc.Somar(5, 3)}");
-Console.WriteLine($"Multiplicação: {calc.Multiplicar(5, 3)}");
-
+// Classe Aluno (herda de Pessoa)
 class Aluno : Pessoa
 {
     public string Matricula { get; set; }
@@ -66,14 +82,3 @@ class Aluno : Pessoa
         Console.WriteLine($"{Nome} está estudando.");
     }
 }
-
-Aluno aluno1 = new Aluno
-{
-    Nome = "Maria",
-    Idade = 20,
-    Matricula = "12345"
-};
-aluno1.Apresentar();
-aluno1.Estudar();
-
-Console.WriteLine("Fim do quarto dia de treinamento.");

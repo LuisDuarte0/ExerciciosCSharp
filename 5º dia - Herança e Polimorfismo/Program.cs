@@ -40,3 +40,17 @@ Cachorro cachorro = new Cachorro
     Nome = "Rex"
 };
 cachorro.EmitirSom();
+
+class Gato : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Miau!");
+    }
+}
+
+Gato gato = new Gato
+{
+    Nome = "Mimi"
+};
+gato.EmitirSom();

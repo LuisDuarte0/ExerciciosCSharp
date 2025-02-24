@@ -12,12 +12,24 @@ class Program
 
 class Pessoa
 {
-    public string Nome { get; set; }
-    public int Idade { get; set; }
+    private string _nome;
+    private int _idade;
+
+    public string Nome
+    {
+        get { return _nome; }
+        set { _nome = value; }
+    }
+
+    public int Idade
+    {
+        get { return _idade; }
+        set { _idade = value; }
+    }
 
     public void Apresentar()
     {
-        Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
+        Console.WriteLine($"Olá, meu nome é {_nome} e tenho {_idade} anos.");
     }
 }
 
@@ -63,3 +75,5 @@ Aluno aluno1 = new Aluno
 };
 aluno1.Apresentar();
 aluno1.Estudar();
+
+Console.WriteLine("Fim do quarto dia de treinamento.");

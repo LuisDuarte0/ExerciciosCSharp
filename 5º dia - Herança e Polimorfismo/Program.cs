@@ -54,3 +54,15 @@ Gato gato = new Gato
     Nome = "Mimi"
 };
 gato.EmitirSom();
+
+List<Animal> animais = new List<Animal>
+{
+    new Animal { Nome = "Animal Genérico" },
+    new Cachorro { Nome = "Rex" },
+    new Gato { Nome = "Mimi" }
+};
+
+foreach (Animal animal in animais)
+{
+    animal.EmitirSom();
+}

@@ -26,3 +26,17 @@ Animal animal = new Animal
     Nome = "Animal Genérico"
 };
 animal.EmitirSom();
+
+class Cachorro : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Au Au!");
+    }
+}
+
+Cachorro cachorro = new Cachorro
+{
+    Nome = "Rex"
+};
+cachorro.EmitirSom();

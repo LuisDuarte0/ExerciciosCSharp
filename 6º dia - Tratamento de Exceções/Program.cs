@@ -55,3 +55,5 @@ finally
 {
     Console.WriteLine("Bloco finally executado.");
 }
+
+Console.WriteLine("Fim do sexto dia de treinamento. Até amanhã!");

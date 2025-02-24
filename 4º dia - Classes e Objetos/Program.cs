@@ -44,3 +44,22 @@ class Calculadora
 Calculadora calc = new Calculadora();
 Console.WriteLine($"Soma: {calc.Somar(5, 3)}");
 Console.WriteLine($"Multiplicação: {calc.Multiplicar(5, 3)}");
+
+class Aluno : Pessoa
+{
+    public string Matricula { get; set; }
+
+    public void Estudar()
+    {
+        Console.WriteLine($"{Nome} está estudando.");
+    }
+}
+
+Aluno aluno1 = new Aluno
+{
+    Nome = "Maria",
+    Idade = 20,
+    Matricula = "12345"
+};
+aluno1.Apresentar();
+aluno1.Estudar();

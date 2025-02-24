@@ -66,3 +66,5 @@ foreach (Animal animal in animais)
 {
     animal.EmitirSom();
 }
+
+Console.WriteLine("Fim do quinto dia de treinamento.");

@@ -18,3 +18,25 @@ catch (DivideByZeroException ex)
 {
     Console.WriteLine($"Erro: {ex.Message}");
 }
+
+try
+{
+    Console.Write("Digite um número: ");
+    int numero = int.Parse(Console.ReadLine());
+    Console.WriteLine($"Número digitado: {numero}");
+}
+catch (FormatException ex)
+{
+    Console.WriteLine($"Erro: {ex.Message}");
+}
+
+try
+{
+    Console.Write("Digite outro número: ");
+    int numero = int.Parse(Console.ReadLine());
+    Console.WriteLine($"Número digitado: {numero}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erro genérico: {ex.Message}");
+}

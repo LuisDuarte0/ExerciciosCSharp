@@ -27,3 +27,20 @@ Pessoa pessoa1 = new Pessoa
     Idade = 20
 };
 pessoa1.Apresentar();
+
+class Calculadora
+{
+    public int Somar(int a, int b)
+    {
+        return a + b;
+    }
+
+    public int Multiplicar(int a, int b)
+    {
+        return a * b;
+    }
+}
+
+Calculadora calc = new Calculadora();
+Console.WriteLine($"Soma: {calc.Somar(5, 3)}");
+Console.WriteLine($"Multiplicação: {calc.Multiplicar(5, 3)}");

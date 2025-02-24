@@ -8,3 +8,13 @@ class Program
         Console.WriteLine("Hoje vamos trabalhar com Tratamento de Exceções.");
     }
 }
+
+try
+{
+    int resultado = 10 / 0;
+    Console.WriteLine($"Resultado: {resultado}");
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine($"Erro: {ex.Message}");
+}

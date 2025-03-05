@@ -24,5 +24,17 @@ await Task.Run(() =>
     }
 });
 Console.WriteLine("Segunda tarefa assíncrona concluída!");
+
+Console.WriteLine("Iniciando terceira tarefa assíncrona...");
+await Task.Run(() => 
+{
+    for (int i = 0; i < 3; i++)
+    {
+        Console.WriteLine($"Tarefa assíncrona 3 em execução: {i + 1}");
+        Task.Delay(1000).Wait();
+    }
+});
+Console.WriteLine("Terceira tarefa assíncrona concluída!");
+
     }
 }

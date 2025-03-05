@@ -13,5 +13,16 @@ class Program
         Console.WriteLine("Tarefa assíncrona concluída!");
 
         Console.WriteLine("Fim do nono dia de treinamento.");
+
+        Console.WriteLine("Iniciando segunda tarefa assíncrona...");
+await Task.Run(() => 
+{
+    for (int i = 0; i < 5; i++)
+    {
+        Console.WriteLine($"Tarefa assíncrona em execução: {i + 1}");
+        Task.Delay(500).Wait();
+    }
+});
+Console.WriteLine("Segunda tarefa assíncrona concluída!");
     }
 }

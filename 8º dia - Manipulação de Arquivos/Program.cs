@@ -20,5 +20,20 @@ class Program
         // Adicionando mais texto ao arquivo
         File.AppendAllText(caminhoArquivo, "\nMais uma linha adicionada.");
         Console.WriteLine("Texto adicionado ao arquivo.");
+
+        // Verificando se o arquivo existe
+if (File.Exists(caminhoArquivo))
+{
+    Console.WriteLine("O arquivo existe.");
+}
+else
+{
+    Console.WriteLine("O arquivo não existe.");
+}
+
+// Copiando o arquivo
+string caminhoCopia = "copia_arquivo.txt";
+File.Copy(caminhoArquivo, caminhoCopia);
+Console.WriteLine("Arquivo copiado com sucesso.");
     }
 }

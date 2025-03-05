@@ -35,5 +35,17 @@ else
 string caminhoCopia = "copia_arquivo.txt";
 File.Copy(caminhoArquivo, caminhoCopia);
 Console.WriteLine("Arquivo copiado com sucesso.");
+
+    // Excluindo o arquivo copiado
+File.Delete(caminhoCopia);
+Console.WriteLine("Arquivo copiado excluído com sucesso.");
+
+// Listando arquivos no diretório atual
+var arquivos = Directory.GetFiles(Directory.GetCurrentDirectory());
+Console.WriteLine("Arquivos no diretório atual:");
+foreach (var arquivo in arquivos)
+{
+    Console.WriteLine(arquivo);
+}
     }
 }

@@ -24,5 +24,17 @@ class Program
         // Usando LINQ para calcular a soma dos números
         int soma = numeros.Sum();
         Console.WriteLine($"Soma dos números: {soma}");
+
+        // Usando LINQ para filtrar números maiores que 5
+var numerosMaioresQue5 = numeros.Where(n => n > 5).ToList();
+Console.WriteLine("Números maiores que 5:");
+foreach (var numero in numerosMaioresQue5)
+{
+    Console.WriteLine(numero);
+}
+
+// Usando LINQ para calcular a média dos números
+double media = numeros.Average();
+Console.WriteLine($"Média dos números: {media}");
     }
 }

@@ -31,7 +31,28 @@ class Program
         // Usando LINQ para encontrar o maior número
         int maiorNumero = numeros.Max();
         Console.WriteLine($"Maior número: {maiorNumero}");
+
+        // Exemplo de função para testar divisão
+try
+{
+    double resultadoDivisao = Dividir(10, 2);
+    Console.WriteLine($"Resultado da divisão: {resultadoDivisao}");
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine($"Erro: {ex.Message}");
+}
     }
+
+    // Função simples para testes
+public static double Dividir(double a, double b)
+{
+    if (b == 0)
+    {
+        throw new DivideByZeroException("Divisão por zero não é permitida.");
+    }
+    return a / b;
+}
 
     // Função simples para testes
     public static int Somar(int a, int b)

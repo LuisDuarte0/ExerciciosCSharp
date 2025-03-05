@@ -4,6 +4,28 @@ using System.Linq;
 
 class Program
 {
+    // Função simples para testes
+    public static int Somar(int a, int b)
+    {
+        return a + b;
+    }
+
+    // Função simples para testes
+    public static int Multiplicar(int a, int b)
+    {
+        return a * b;
+    }
+
+    // Função simples para testes
+    public static double Dividir(double a, double b)
+    {
+        if (b == 0)
+        {
+            throw new DivideByZeroException("Divisão por zero não é permitida.");
+        }
+        return a / b;
+    }
+
     static void Main(string[] args)
     {
         Console.WriteLine("Bem-vindo ao décimo dia de treinamento em C#!");
@@ -33,36 +55,14 @@ class Program
         Console.WriteLine($"Maior número: {maiorNumero}");
 
         // Exemplo de função para testar divisão
-try
-{
-    double resultadoDivisao = Dividir(10, 2);
-    Console.WriteLine($"Resultado da divisão: {resultadoDivisao}");
-}
-catch (DivideByZeroException ex)
-{
-    Console.WriteLine($"Erro: {ex.Message}");
-}
-    }
-
-    // Função simples para testes
-public static double Dividir(double a, double b)
-{
-    if (b == 0)
-    {
-        throw new DivideByZeroException("Divisão por zero não é permitida.");
-    }
-    return a / b;
-}
-
-    // Função simples para testes
-    public static int Somar(int a, int b)
-    {
-        return a + b;
-    }
-
-    // Função simples para testes
-    public static int Multiplicar(int a, int b)
-    {
-        return a * b;
+        try
+        {
+            double resultadoDivisao = Dividir(10, 2);
+            Console.WriteLine($"Resultado da divisão: {resultadoDivisao}");
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine($"Erro: {ex.Message}");
+        }
     }
 }
